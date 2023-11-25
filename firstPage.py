@@ -7,6 +7,8 @@ def home():
 
     return render_template('index.html')
 
+if __name__ == '__main__':
+    app.run()
 
 @app.route("/<name>")
 def user(name):
@@ -15,10 +17,6 @@ def user(name):
 app.route("/admin")
 def admin():
     return redirect(url_for("/home"))
-
-    
-if __name__ == '__main__':
-    app.run()
 
 
 
